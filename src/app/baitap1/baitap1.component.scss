@@ -1,0 +1,15 @@
+.contents{
+    display: flex;
+    .content{
+        width: 70%;
+        background-color: orange;
+        color: white;
+        text-align: center;
+    }
+    .sidebar{
+        width: 30%;
+        background-color: rgb(18, 126, 126);
+        color: white;
+        text-align: center;
+    }
+}
