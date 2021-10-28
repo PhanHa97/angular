@@ -8,6 +8,7 @@ import { Baitap1ConentComponent } from './baitap1/baitap1-conent/baitap1-conent.
 import { Baitap1SidebarComponent } from './baitap1/baitap1-sidebar/baitap1-sidebar.component';
 import { Baitap1FooterComponent } from './baitap1/baitap1-footer/baitap1-footer.component';
 import { Baitap2Module } from './baitap2/baitap2.module';
+import { Baitap3Module } from './baitap3/baitap3.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { Baitap2Module } from './baitap2/baitap2.module';
     Baitap1FooterComponent,
     
   ],
-  imports: [BrowserModule, Baitap2Module],
+  imports: [BrowserModule, Baitap2Module,Baitap3Module],
   providers: [],
   bootstrap: [AppComponent],
 })
