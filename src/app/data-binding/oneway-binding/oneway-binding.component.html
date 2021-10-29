@@ -1,1 +1,5 @@
-<p>oneway-binding works!</p>
+<h3>*oneway-binding works!</h3>
+<div>{{fullname}}</div>
+<div>Age:{{age}}</div>
+<input type="text" [value]="fullname" #thamso />
+<button class="btn btn-success" (click)="eventBinding(thamso.value)"> Event Binding</button>

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./twoeway-binding.component.scss']
 })
 export class TwoewayBindingComponent implements OnInit {
-
+  username:string="Nguyen";
   constructor() { }
 
   ngOnInit(): void {
