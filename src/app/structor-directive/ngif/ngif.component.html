@@ -1,1 +1,19 @@
-<p>ngif works!</p>
+<h3>*ngif works!</h3>
+<div *ngIf="status">Cybersoft</div>
+<button class="btn btn-info" (click)="toggle()">Toggle</button>
+<hr/>
+<div *ngIf="isLogin;else PleaseLogin">
+    <h1>Xin chao cybersoft</h1>
+    <button class="btn btn-danger" (click)="logout()">Logout</button>
+</div>
+<ng-template #PleaseLogin>
+    <div>
+        <h1>Vui long Login</h1>
+        <button class="btn btn-success"(click)="login()">Login</button>
+    </div>
+</ng-template>
+<ng-template #Template>
+    <div>Noi dung template</div>
+</ng-template>
+
+<div *ngTemplateOutlet="Template"></div>
