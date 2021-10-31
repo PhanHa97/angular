@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
+import { MovieComponent } from '../movie/movie.component';
 
 @Component({
   selector: 'app-list-movie',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-movie.component.scss'],
 })
 export class ListMovieComponent implements OnInit {
+  @ViewChildren(MovieComponent) tagListMovie: QueryList<MovieComponent> =
+    new QueryList();
   danhSachPhim = [
     {
       maPhim: 1,
@@ -49,8 +52,15 @@ export class ListMovieComponent implements OnInit {
     movieLike.soLike++;
   }
 
-  addMovie(movie:any){
+  addMovie(movie: any) {
     this.danhSachPhim.push(movie);
   }
 
+  viewChilren() {
+   this.tagListMovie.forEach((movieComponent : any)=>{
+    if (movieComponent.movie.maPhim === 2){
+      movieComponent.movie.gia = 100000;
+    }
+   })
+  }
 }
