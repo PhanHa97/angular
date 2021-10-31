@@ -33,20 +33,24 @@ export class ListMovieComponent implements OnInit {
     },
   ];
   danhSachLike = [
-    {maPhim: 1, tenPhim: "Minions", soLike: 0},
-    {maPhim: 2, tenPhim: "Home", soLike: 0},
-    {maPhim: 3, tenPhim: "Harvie", soLike: 0},
-    {maPhim: 4, tenPhim: "Insideout", soLike: 0},
-  ]
+    { maPhim: 1, tenPhim: 'Minions', soLike: 0 },
+    { maPhim: 2, tenPhim: 'Home', soLike: 0 },
+    { maPhim: 3, tenPhim: 'Harvie', soLike: 0 },
+    { maPhim: 4, tenPhim: 'Insideout', soLike: 0 },
+  ];
   constructor() {}
 
   ngOnInit(): void {}
 
-  likeMovie(movie:any){
-    const movieLike:any =  this.danhSachLike.find((item: any)=>{
-      return item.maPhim === movie.maPhim
+  likeMovie(movie: any) {
+    const movieLike: any = this.danhSachLike.find((item: any) => {
+      return item.maPhim === movie.maPhim;
     });
-    movieLike.soLike++
+    movieLike.soLike++;
+  }
+
+  addMovie(movie:any){
+    this.danhSachPhim.push(movie);
   }
 
 }

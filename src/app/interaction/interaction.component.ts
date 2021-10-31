@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {ListMovieComponent} from "./list-movie/list-movie.component";
 
 @Component({
   selector: 'app-interaction',
   templateUrl: './interaction.component.html',
-  styleUrls: ['./interaction.component.scss']
+  styleUrls: ['./interaction.component.scss'],
 })
 export class InteractionComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild(ListMovieComponent) domListMovie: ListMovieComponent = new ListMovieComponent();
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+  themPhim(maPhim: string, tenPhim: string, giaPhim: string, anhPhim: string) {
+    const movie = {
+      maPhim,
+      tenPhim,
+      gia: giaPhim,
+      hinhAnh: anhPhim,
+    };
+    this.domListMovie.addMovie(movie);
   }
-
 }
