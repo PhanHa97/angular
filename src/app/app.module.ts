@@ -11,6 +11,7 @@ import { Baitap2Module } from './baitap2/baitap2.module';
 import { Baitap3Module } from './baitap3/baitap3.module';
 import { DataBindingModule } from './data-binding/data-binding.module';
 import { StructorDirectiveModule } from './structor-directive/structor-directive.module';
+import { InteractionModule } from './interaction/interaction.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { StructorDirectiveModule } from './structor-directive/structor-directive
     Baitap3Module,
     DataBindingModule,
     StructorDirectiveModule,
+    InteractionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

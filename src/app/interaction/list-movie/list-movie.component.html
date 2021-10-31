@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <ng-container *ngIf="danhSachPhim">
+            <div class="col-sm-3" *ngFor="let movie of danhSachPhim">
+                <app-movie [movie]="movie" (eventLike)="likeMovie($event)"></app-movie>
+            </div>
+        </ng-container>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Danh sach like</h1>
+            <div *ngFor="let movie of danhSachLike">{{movie.tenPhim}} - {{movie.soLike}}</div>
+        </div>
+    </div>
+</div>
